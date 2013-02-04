@@ -58,7 +58,6 @@ $.plot($('.graph'),d)
     plot.hooks.processDatapoints.push(
     function(plot, series, datapoints) {
     if (!series.colorbar || series.colorbar.show != true){return ;}
-    console.log('here');
     var opts = series.yaxis.options;
     opts.position = series.colorbar.position;
     opts.tickLength = series.colorbar.width + margin;

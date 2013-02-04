@@ -65,11 +65,6 @@ $.plot($('.graph'),d)
     opts.max = datapoints.points[datapoints.points.length-2];
     opts.min = datapoints.points[0];
     opts.tickColor = "rgba(255,255,255,0)";
-    
-
-    //Pop another axis on the right if there isn't already one!
-
-
     });
 
     plot.hooks.drawSeries.push(
@@ -124,7 +119,6 @@ $.plot($('.graph'),d)
       ctx.lineTo(boxRight -boxWidth ,boxBottom);
       ctx.closePath();
       ctx.lineWidth = 0;
-      //ctx.stroke();
       ctx.fill();
       }
       
@@ -161,35 +155,3 @@ $.plot($('.graph'),d)
 
 })(jQuery);
 
-/* need colorbar:{show:true, width:10}, data:[[v,[r,g,b]],[v,[r,g,b]]], yaxis:3 ;
-
-
-
-
-$(function(){
-
-var d = [{
-colorbar:{show:true, width:15, position:"right"},
-data:[[0,[0, 0, 0]], 
-[10,[10, 10, 10]], 
-[20,[20, 20, 20]], 
-[30,[30, 30, 30]], 
-[40,[70, 40, 40]], 
-[50,[100, 50, 50]], 
-[60,[130, 60, 60]], 
-[80,[180, 80, 80]], 
-[90,[200, 90, 90]], 
-[100,[250, 250, 250]]],
-yaxis:3,
-},
-{
-lines:{show:true},
-color:"#338833",
-data:[[0,0],[1,1]]
-}
-];
-
-$.plot($('.graph'),d)
-
-
-})*/
